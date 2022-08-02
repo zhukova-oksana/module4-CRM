@@ -9,6 +9,7 @@
   width: 100%;
   max-width: 792px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  display: none;
 }
 
 .overlay {
@@ -19,7 +20,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, .6);
   z-index: 1;
-  /*display: none;*/
+  display: none;
 }
 
 .add-product__container {
