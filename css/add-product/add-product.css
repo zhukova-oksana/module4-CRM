@@ -30,8 +30,8 @@
 
 .add-product__close {
   position: absolute;
-  right: -56px;
-  top: -12px;
+  right: 30px;
+  top: 20px;
 }
 
 .add-product__header {
@@ -154,17 +154,12 @@
 }
 
 .form-add__input_type_file {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  opacity: 0;
   outline: none;
   padding: 0;
-  height: 40px;
 }
 
-.form-add__input_type_file:before {
-  content: 'Добавить изображение';
+.form-add__label_type_file {
   position: absolute;
   top: 0;
   left: 0;
@@ -181,6 +176,7 @@
   text-transform: uppercase;
   border-radius: 6px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .form-add__input:focus,
@@ -271,4 +267,61 @@
   color: var(--color-white);
   border: 0;
   padding: 10px 25px;
+}
+
+@media(max-height: 700px) {
+  .add-product {
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0%);
+  }
+}
+
+@media(max-width: 800px) {
+  .add-product__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .add-product__container {
+    padding: 0 20px;
+  }
+
+  .form-add__fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, minmax(61px, auto));
+  }
+
+  .form-add__item_type_description {
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+  }
+
+  .form-add__item_type_amount {
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+  }
+
+  .form-add__item_type_price {
+    grid-column: 1 / 2;
+    grid-row: 8 / 9;
+  }
+
+  .form-add__item_type_file {
+    grid-column: 1 / 2;
+    grid-row: 9 / 10;
+  }
+}
+
+@media(max-width: 480px) {
+  .add-product__header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-add__button {
+    flex-direction: column;
+    gap: 20px;
+  }
 }

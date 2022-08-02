@@ -246,10 +246,11 @@
 
   <div class="overlay"></div>
   <section class="add-product">
+    <a href="#">
+      <img class="add-product__close" src="css/add-product/img/close.svg" alt="Закрыть окно">
+    </a>
     <div class="container add-product__container">
-      <a href="#">
-        <img class="add-product__close" src="css/add-product/img/close.svg" alt="Закрыть окно">
-      </a>
+
 
       <div class="add-product__header">
         <h2 class="add-product__title">Добавить товар</h2>
@@ -298,7 +299,8 @@
           </div>
 
           <div class="form-add__item form-add__item_type_file">
-            <input class="form-add__input form-add__input_type_file" type="file" name="price" id="price" pattern="[0-9]+" required>
+            <label for="file" class="form-add__label_type_file">Добавить изображение</label>
+            <input class="form-add__input form-add__input_type_file" type="file" name="file" id="file">
           </div>
 
         </fieldset>
